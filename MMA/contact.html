@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Alumunium">
+        <title>Metalurgi Mitra Abadi</title>
+        <link rel="shortcut icon" type="image/png" href="images/Logo Polos.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="scrollTop" onclick="scrolltoTop();"><span class="fa fa-angle-up"></span></div>
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/Logo Polos.png" alt="logo"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-window-close" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="product.html">OUR PRODUCT</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1>Contact Us</h1>
+        </section>
+
+<!--- Contact Us --->
+<section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.7095427122142!2d106.89748292919053!3d-6.152422699721606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5ea52eecc81%3A0xb51abaef79b1241b!2sPT.%20Metalurgi%20Mitra%20Abadi!5e0!3m2!1sen!2sid!4v1632232267476!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+ 
+<section class="contact-us">
+
+    <div class="row">
+        <div class="contact-col">
+            <div>
+                <i class="fa fa-home"></i>
+                <span>
+                    <h5>Komplek Gading New Batavia Blok LC9, No. 30, Jl. Boulevard Bar. Raya</h5>
+                    <p>Kelapa Gading, Jakarta Utara, 14240</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <span>
+                    <h5>Cicau, Central Cikarang, Bekasi, West Java 17530</h5>
+                    <p>Warehouse</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <span>
+                    <h5>021-29385380</h5>
+                    <p>Monday to Friday, 09.00 - 17.00</p>
+                </span>
+            </div>        
+            <div>
+                <i class="fa fa-envelope-o"></i>
+                <span>
+                    <h5>joseph.ptmma@gmail.com</h5>
+                    <p>Email us your query</p>
+                </span>
+            </div>
+        </div>
+        <div class="contact-col">
+            <form action="POST" data-netlify="true">
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="email" name="email" placeholder="Enter email address" required>
+                <input type="text" name="subject" placeholder="Enter your subject" required>
+                <textarea  rows="8" name="message" placeholder="Message" required></textarea>
+                <button type="submit" class="second-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!---- FOOTER ---->
+<div class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h2>About Us</h2> 
+            <p>Our company aims for the best quality products and best satisfaction <br>throughout the needs for your company. Our goal is to be
+            the best and <br> long lasting global partner around the globe. </p>
+        </div>
+        <div class="footer-section info">
+            <h2 style="display: inline;">PT. Metalurgi Mitra Abadi</h2> <h3 style="display: inline;"> &nbsp; - &nbsp; Kantor Pusat</h3>
+           <span><i class="fa fa-map-marker"></i> &nbsp; Komplek Gading New Batavia Blok LC9, No. 30, Jl. Boulevard Bar. Raya, Kelapa Gading, Jakarta Utara, 14240</span> 
+           <span><i class="fa fa-phone"></i> &nbsp; 021-29385380 </span>
+           <span><i class="fa fa-fax"></i> &nbsp; 021- 29382717 </span>
+           <span><i class="fa fa-envelope"></i> &nbsp; joseph.ptmma@gmail.com </span>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; PT. Metalurgi Mitra Abadi, 2021, All rights reserved | Design by JDMedia.</p>
+    </div>
+</div>
+
+
+<!---JavaScript for Toogle Menu--->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-175px";
+    }
+</script>
+
+<!---- Javascript for slider ---->
+<script type="text/javascript">
+    const slider = document.querySelector(".slider")
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const slides = document.querySelectorAll(".slide");
+    const slideIcons = document.querySelectorAll(".slide-icon");
+    const numberOfSlides = slides.length;
+    var slideNumber = 0;
+    
+    //image slider next button
+    nextBtn.addEventListener("click", () => {
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+            slideIcon.classList.remove("active");
+        });
+    
+        slideNumber++;
+    
+        if(slideNumber > (numberOfSlides - 1)){
+            slideNumber = 0;
+        }
+    
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+    });
+    
+    //image slider prev button
+    prevBtn.addEventListener("click", () => {
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+            slideIcon.classList.remove("active");
+        });
+    
+        slideNumber--;
+    
+        if(slideNumber < 0){
+            slideNumber = numberOfSlides - 1;
+        }
+    
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+    });
+    
+    //image slider AUTOPLAY
+    var playSlider;
+    var repeater = () => {
+        playSlider = setInterval(function(){
+            slides.forEach((slide) => {
+            slide.classList.remove("active");
+            });
+            slideIcons.forEach((slideIcon) => {
+            slideIcon.classList.remove("active");
+            });
+    
+            slideNumber++;
+    
+            if(slideNumber > (numberOfSlides - 1)){
+            slideNumber = 0;
+            }
+    
+            slides[slideNumber].classList.add("active");
+            slideIcons[slideNumber].classList.add("active");
+        }, 4000);
+    }
+    repeater();
+    
+    //image slider pause autoplay
+    slider.addEventListener("mouseover", () => {
+        clearInterval(playSlider);
+    });
+    slider.addEventListener("mouseout", () => {
+        repeater();
+    });
+</script>
+
+<!-- Script back to top-->
+<script type="text/javascript">
+    window.addEventListener('scroll', function(){
+        var scroll = document.querySelector('.scrollTop');
+        scroll.classList.toggle("active" , window.scrollY > 200)
+    })
+    function scrolltoTop(){
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+</script>
+
+</body>
+</html>
